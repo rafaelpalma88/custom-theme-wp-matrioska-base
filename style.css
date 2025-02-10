@@ -1,0 +1,620 @@
+/*
+Theme Name: Matrioska Base
+Theme URI: http://seudominio.com/
+Author: Rafael Costa Palma
+Author URI: http://seudominio.com/
+Description: Um tema personalizado para WordPress.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wp-matrioska-base
+*/
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Figtree', serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100, 'YTLC' 500;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important; /* Remove o sublinhado */
+  color: inherit; /* Faz com que a cor do link herde da cor do texto pai */
+}
+
+/* Para hover e foco */
+a:hover,
+a:focus {
+  text-decoration: none !important; /* Remove o sublinhado também no hover e foco */
+  color: inherit; /* Mantém a cor do texto */
+}
+
+.container {
+  max-width: 1180px; /* Define a largura máxima do site */
+  margin-left: auto; /* Centraliza o container horizontalmente */
+  margin-right: auto; /* Centraliza o container horizontalmente */
+  padding-left: 15px; /* Adiciona espaçamento interno à esquerda */
+  padding-right: 15px; /* Adiciona espaçamento interno à direita */
+}
+
+/* Cabeçalho */
+.site-header {
+  background-color: #fff; /* Cor de fundo do cabeçalho */
+  color: black; /* Cor do texto */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.site-branding {
+  flex: 1;
+}
+
+.site-branding a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+.main-navigation {
+  flex: 2;
+  padding-right: 2.5rem;
+}
+
+.main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-navigation li {
+  margin-left: 1rem;
+  font-weight: 800;
+  color: #212529;
+}
+
+.main-navigation a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: block; /* O link cobre toda a área do item */
+  padding: 10px 10px; /* Aumenta a área clicável */
+  border: 1px solid transparent; /* Borda transparente ao redor dos links */
+  border-bottom: 3px solid transparent;
+}
+
+.main-navigation a:hover {
+  text-decoration: none;
+  color: #1f00a7;
+  //border-bottom: 3px solid #98669e;
+}
+
+.main-navigation li.current_page_item a {
+  color: #1f00a7;
+  //border-bottom: 3px solid #98669e;
+}
+
+/* .main-navigation li.current_page_item a {
+  color: lightgray;
+} */
+
+.custom-logo {
+  max-width: 310px; /* Largura máxima do logo */
+  height: auto; /* Mantém a proporção original da imagem */
+}
+
+.content {
+  //flex: 0 0 66.66%; /* 2/3 da largura */
+  //margin-right: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  flex: 0 0 33.33%; /* 1/3 da largura */
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .widget {
+  margin-bottom: 30px; /* Espaçamento entre widgets */
+}
+
+.entry-title {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.entry-meta {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.entry-content p {
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.footer-widgets {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.home nav,
+#site-navigation {
+  display: none;
+}
+.container {
+  max-width: 90%; /* Limita a largura máxima do grid */
+  margin: 0 auto; /* Centraliza o grid no meio da página */
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanhos iguais */
+  gap: 20px; /* Espaçamento entre os itens */
+  justify-content: center; /* Centraliza o grid horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+.grid-item {
+  background-color: #f1f1f1; /* Cor de fundo para visualização */
+  padding: 20px;
+  text-align: center; /* Centraliza o texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  min-height: 225px;
+}
+.banner {
+  h1,
+  h3 {
+    text-align: center;
+  }
+}
+.boxes-advantages {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.contact-form {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: #062085;
+
+  .form-wrapper {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .form-left {
+    flex: 1;
+  }
+
+  .form-right {
+    flex: 1;
+  }
+
+  h1 {
+    text-align: center;
+    color: white;
+  }
+
+  p {
+    color: white;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  label {
+    padding-bottom: 1rem;
+  }
+
+  input[type='text'],
+  input[type='tel'],
+  input[type='email'] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 80%;
+  }
+
+  textarea {
+    width: 80%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.contact-form input[type='submit'] {
+  background-color: #baac00; /* Cor de fundo chamativa */
+  color: white; /* Cor do texto */
+  padding: 12px 30px; /* Aumenta o tamanho do botão */
+  font-size: 1rem; /* Aumenta o tamanho da fonte */
+  border: none; /* Remove borda */
+  border-radius: 5px; /* Arredonda as bordas */
+  cursor: pointer; /* Adiciona o cursor de ponteiro ao passar o mouse */
+  transition: background-color 0.3s ease; /* Efeito de transição suave */
+  align-self: flex-end; /* Alinha à direita */
+}
+
+/* Efeito hover para o botão */
+.contact-form input[type='submit']:hover {
+  background-color: #e3d204; /* Cor ao passar o mouse */
+}
+
+.latest-posts {
+  padding: 5rem 5rem;
+
+  background-color: #f9f9f9;
+
+  text-align: center;
+}
+
+.posts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: initial;
+}
+
+.post-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.post-item a,
+.post-item a:hover {
+  text-decoration: none;
+}
+
+.post-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.post-item h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.post-item h3 a {
+  text-decoration: none;
+  color: #333;
+}
+
+.post-item h3 a:hover {
+  color: #0073aa;
+}
+
+.post-item p {
+  margin: 0;
+  color: #555;
+}
+
+/* Remover sublinhado do link geral e no hover */
+.post-item a {
+  text-decoration: none;
+  color: inherit; /* Garante que a cor seja herdada do pai */
+}
+
+.post-item a:hover,
+.post-item a:focus {
+  text-decoration: none; /* Garantir que o hover também não tenha sublinhado */
+  color: inherit; /* Para garantir que a cor não mude no hover */
+}
+
+.post-item h3 a {
+  text-decoration: none;
+  color: #333;
+}
+
+.post-item h3 a:hover {
+  color: #0073aa;
+}
+
+.view-all {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0073aa;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.view-all:hover {
+  background-color: #005f8d;
+}
+
+.ico-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 55px;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  width: 80%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form input[type='submit'] {
+  background-color: #baac00;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-end;
+}
+
+.contact-form input[type='submit']:hover {
+  background-color: #e3d204;
+}
+
+.wpcf7-response-output {
+  background-color: #baac00;
+  color: black;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.wpcf7-validation-errors {
+  background-color: #e74c3c;
+  color: white;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.banner h1 {
+  font-size: 3rem; /* Tamanho grande para o título */
+  font-weight: 700; /* Peso da fonte para maior destaque */
+  color: #1f00a7; /* Azul diferenciado para o título */
+  font-family: 'Poppins', sans-serif; /* Mesma fonte do exemplo */
+  margin-bottom: 1rem;
+  text-align: center; /* Centralizar */
+}
+
+.banner h3 {
+  font-size: 1.5rem; /* Tamanho menor para o subtítulo */
+  font-weight: 400; /* Peso da fonte normal */
+  color: #333; /* Cor neutra para o subtítulo */
+  font-family: 'Poppins', sans-serif; /* Mesma fonte */
+  margin-bottom: 2rem;
+  text-align: center; /* Centralizar */
+}
+
+.banner .text {
+  flex: 1; /* O texto ocupa metade do espaço */
+}
+
+.banner .image {
+  flex: 1; /* A imagem ocupa metade do espaço */
+}
+
+.banner img {
+  max-width: 100%; /* Garante que a imagem se ajuste ao espaço */
+  height: auto;
+}
+
+.entry-content ol {
+  list-style-type: decimal; /* Padrão numérico */
+  padding-left: 40px; /* Adiciona espaçamento à esquerda para os números */
+  margin-bottom: 20px;
+}
+
+.entry-content ol li {
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+  padding-left: 5px; /* Pequeno espaçamento para o conteúdo do item */
+}
+
+.entry-content ol li strong {
+  font-weight: bold;
+}
+
+.wp-block-separator {
+  border: none;
+  border-top: 2px solid lightgray;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .latest-posts {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .banner h1 {
+    font-size: 2rem; /* Ajuste para telas menores */
+  }
+
+  .banner h3 {
+    font-size: 1.2rem; /* Ajuste para subtítulo em mobile */
+  }
+  .grid-container {
+    grid-template-columns: 1fr; /* Cada grid-item ocupa 100% da largura */
+    max-width: 100%; /* Para garantir que ocupe a largura total da tela */
+  }
+
+  .contact-form .form-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-form input[type='submit'] {
+    align-self: center; /* Centraliza o botão em dispositivos móveis */
+  }
+
+  .site-branding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .site-branding img {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .banner {
+    flex-direction: column; /* Empilha a imagem e o texto */
+    text-align: center;
+  }
+
+  .banner .image {
+    margin-bottom: 20px;
+  }
+  .content,
+  .sidebar {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+  .sidebar {
+    margin-top: 20px;
+  }
+}
+
+/* Estilização do logo em telas pequenas */
+@media screen and (max-width: 600px) {
+  .custom-logo {
+    max-width: 300px; /* Ajusta a largura máxima do logo para telas pequenas */
+  }
+}
+
+.list-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.box-single-post {
+  box-sizing: border-box;
+}
+
+.box-item-post {
+  flex: 1 1 33%;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 33%;
+}
+
+.post-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.post-thumbnail img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  // 350x200
+}
+/* Estilo dos itens numerados (razões) */
+.single-column-post ul,
+.single-column-post ol {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.single-column-post li {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.single-column-post li strong {
+  font-weight: bold;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+/* Estilo dos parágrafos */
+.single-column-post p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Espaçamento entre os itens e o texto */
+.single-column-post {
+  padding: 20px 40px;
+  margin: 0 auto;
+  background-color: #fff;
+  max-width: 800px;
+}
+
+.single-column-post li + li {
+  margin-top: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #2980b9;
+}
